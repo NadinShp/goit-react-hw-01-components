@@ -5,7 +5,7 @@ import styles from "./statistics.module.css";
 
 const Statistics = ({ title, stats }) => (
     <section className={styles.statistics}>
-        <h2 className={styles.title}>{title}</h2>
+        {title && (<h2 className={styles.title}>{title}</h2>)}
         <ul className={styles.stat__list}>
             {stats.map(({ id, label, percentage }) => {
                 const backgroundStyle = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ')';
@@ -22,9 +22,6 @@ const Statistics = ({ title, stats }) => (
     </section>
 );
 
-Statistics.defaultProps = {
-    title: "Upload stats",
-}
 Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
