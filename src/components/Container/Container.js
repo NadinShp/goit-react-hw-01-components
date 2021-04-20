@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const Container = ({ widthContainer, children }) => (
     <div style={{
-        width: { widthContainer },
+        width: widthContainer,
         margin: "0 auto",
         padding: 20,
     }}>

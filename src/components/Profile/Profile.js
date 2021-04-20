@@ -8,7 +8,7 @@ const Profile = ({ name, tag, location, avatar, stats: { followers, views, likes
             <div className={styles.description}>
                 <img
                     src={avatar}
-                    alt="Аватар пользователя"
+                    alt={`Аватар пользователя ${name}`}
                     className={styles.avatar}
                 />
                 <h1 className={styles.name}>{name}</h1>
